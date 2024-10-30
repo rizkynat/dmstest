@@ -1,0 +1,94 @@
+#table-artikel th {
+    cursor: pointer;
+  }
+  
+  #table-finance th {
+    cursor: pointer;
+  }
+  
+  #table-bank th {
+    cursor: pointer;
+  }
+  
+  #table-volume th {
+    cursor: pointer;
+  }
+  
+  #table-reviewer th {
+    cursor: pointer;
+  }
+  
+  #table-invoice th {
+    cursor: pointer;
+  }
+  
+  #table-kwitansi th {
+    cursor: pointer;
+  }
+  
+  #table-loa th {
+    cursor: pointer;
+  }
+  
+  #table-payment th {
+    cursor: pointer;
+  }
+  
+  .sort-icons {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 4px;
+    /* Add some space between the header text and the icons */
+  }
+  
+  /* Style for the ascending sort icon */
+  .sort-asc {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 1px;
+  }
+  
+  /* Style for the descending sort icon */
+  .sort-desc {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid rgba(0, 0, 0, 0.5);
+    margin-top: 1px;
+  }
+  
+  .fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 99;
+    overflow: auto;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1000;
+    top: 50px;
+    right: 50%;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
