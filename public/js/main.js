@@ -61,6 +61,7 @@ function currentPageMenu() {
         return element;
     });
     let urlGroup = {
+        dashboard: ["dashboard"],
         dataentry: ["dataentry"],
         register: ["register"],
     };

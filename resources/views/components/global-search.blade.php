@@ -27,13 +27,7 @@
         </span>
       </li>
       <!-- Notifications menu -->
-      <li class="relative">
-        <a href="{{asset('storage/document/Buku Panduan Emin.pdf')}}">
-        <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.529 9.988a2.502 2.502 0 1 1 5 .191A2.441 2.441 0 0 1 12 12.582V14m-.01 3.008H12M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
-        </a>
-      </li>
+
       <!-- Profile menu -->
       <li class="relative">
         <button class="align-middle rounded-full focus:shadow-outline-primary focus:outline-none " x-on:mouseenter="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account" aria-haspopup="true">
@@ -43,9 +37,13 @@
         <template x-if="isProfileMenuOpen">
           <ul x-transition:leave="transition ease-in duration-150" x-transiton:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.away="closeProfileMenu" @keydown.escape="closeProfileMenu" class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border-gray-100 rounded-md shadow-md " aria-label="submenu">
             <li class="flex justify-between items-center mb-2">
-              <a href="/profil">
-                <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=200&amp;fit=max&amp;s=aa3a807e1bbdfd4364d1f449eaa96d82" alt="" aria-hidden="true">
-              </a>
+              <div class="flex gap-4">
+                <a href="/profil">
+                  <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=200&amp;fit=max&amp;s=aa3a807e1bbdfd4364d1f449eaa96d82" alt="" aria-hidden="true">
+                </a>
+
+                <span>{{Auth::user()->name}}</span>
+              </div>
               <a href="/logout">
                 <button type="button" class="text-white bg-primary hover:bg-primary/75 focus:border-primary font-medium rounded-lg text-xs px-1 py-1 focus:outline-none">
                   <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,9 +53,10 @@
               </a>
             </li>
             <li id="profile-section">
-            <p class="text-base font-bold leading-none text-gray-900"></p>
-            <p class="text-sm font-normal">{{Auth::user()->email}}
-            </p><p class="mb-2 text-sm font-light">Role: <span class="font-bold"></span>{{Auth::user()->role}}</p>
+              <p class="text-base font-bold leading-none text-gray-900"></p>
+              <p class="text-sm font-normal">{{Auth::user()->email}}
+              </p>
+              <p class="mb-2 text-sm font-light">Role: <span class="font-bold"></span>{{Auth::user()->role}}</p>
             </li>
 
           </ul>

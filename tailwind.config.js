@@ -154,6 +154,8 @@ export default {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
 

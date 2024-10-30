@@ -3,7 +3,7 @@
 @section('content')
 <div class="flex items-center min-h-screen bg-gray-50 ">
   <div class="flex-1 h-full p-10 max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl">
-  @if(session('error'))
+    @if(session('error'))
     <div id="alert-danger" class="z-[1000] text-red-700 bg-red-50 flex left-1/2 top-1/8 transform -translate-x-1/2 -translate-y-1/2 fixed p-4 mr-4 mt-4 mb-4 text-sm rounded-lg" role="alert">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 mr-3">
         <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
@@ -11,7 +11,7 @@
       <span class="sr-only">Info</span>
       <div>
         <span id="alert-content-danger" class="font-medium">
-        {{session('error')}}
+          {{session('error')}}
         </span>
       </div>
     </div>
